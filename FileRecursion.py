@@ -29,6 +29,10 @@ def find_files(suffix, path):
 if __name__ == "__main__":
   print("The Paths that end with .c are \n")
   print(find_files(".c",input("Type your path \n")))
+  # test case: ./testdirs
+  # result: []
+  # test case ./testdir
+  # result: [./testdir/subdir1/a.c, ./testdir/subdir3/subsubdir1/b.c, ./testdir/subdir5/a.c, ./testdir/t1.c]
 
 """
 explanation: 
@@ -47,4 +51,5 @@ Time Complexity:
 
 Design Choice:
 
-Simple Recursion and conditional checking.
+Simple Recursion and conditional checking
+"""

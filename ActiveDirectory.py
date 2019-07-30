@@ -47,12 +47,15 @@ if __name__ == "__main__":
 
     print("check sub_child_user in child: \n")
     print(is_user_in_group(sub_child_user,child))
+    # True
 
     print("check sub_child_user in parent: \n")
     print(is_user_in_group(sub_child_user,parent))
+    # True
 
     print("check haha not in child: \n")
     print(is_user_in_group("haha",child))
+    # False
 
 """
 explanation: 

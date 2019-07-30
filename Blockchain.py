@@ -61,7 +61,73 @@ if __name__ == "__main__":
 			 curr.next if curr.next else "None")
 			)
 		curr = curr.next
+# test case 1:
 
+"""
+type the data of block
+kaka
+Continue Add? 
+ yes/no 
+yes
+type the data of block
+baba
+Continue Add? 
+ yes/no 
+gaga
+Loop through Blocks: 
+
+At current block, timestamp is 2019-07-29 22:10:37.013763+00:00, data is kaka, previous_hash is 0, current hash is 19929d0debd4cf75da33a3ab7904a1394a3977f9d0535fae33ca2117ead12edd, 			previous block is None, next block is <__main__.Block object at 0x10d19c630>
+At current block, timestamp is 2019-07-29 22:10:40.110990+00:00, data is baba, previous_hash is 19929d0debd4cf75da33a3ab7904a1394a3977f9d0535fae33ca2117ead12edd, current hash is c5d16497a55599e82c7fc3bcafc19061821bb8ac3f8c5ed6649eb83032e545f4, 			previous block is <__main__.Block object at 0x10d175a58>, next block is None
+
+"""
+
+# test case 2:
+
+"""
+type the data of block
+baba
+Continue Add? 
+ yes/no 
+yes
+type the data of block
+kaka
+Continue Add? 
+ yes/no 
+yes
+type the data of block
+gaga
+Continue Add? 
+ yes/no 
+yes
+type the data of block
+shdishfs
+Continue Add? 
+ yes/no 
+
+Loop through Blocks: 
+
+At current block, timestamp is 2019-07-29 22:11:27.153523+00:00, data is baba, previous_hash is 0, current hash is 8743e965d6d25eb9ca3e323e8e104c8bacf2133b8069458ad345c8df3d1d988d, 			previous block is None, next block is <__main__.Block object at 0x1101b7668> 
+
+At current block, timestamp is 2019-07-29 22:11:30.230782+00:00, data is kaka, previous_hash is 8743e965d6d25eb9ca3e323e8e104c8bacf2133b8069458ad345c8df3d1d988d, current hash is 62f381d06eeb22164d196a559f5a6014a8d0b4fa958ca733b0d2bed01b51e68b, 			previous block is <__main__.Block object at 0x11018fa90>, next block is <__main__.Block object at 0x110195390> 
+
+At current block, timestamp is 2019-07-29 22:11:33.584772+00:00, data is gaga, previous_hash is 62f381d06eeb22164d196a559f5a6014a8d0b4fa958ca733b0d2bed01b51e68b, current hash is fde845b827433525ef5fd476988a3c9fb948cabbba20423ea40c0bde44c4f948, 			previous block is <__main__.Block object at 0x1101b7668>, next block is <__main__.Block object at 0x110195400> 
+
+At current block, timestamp is 2019-07-29 22:11:37.407517+00:00, data is shdishfs, previous_hash is fde845b827433525ef5fd476988a3c9fb948cabbba20423ea40c0bde44c4f948, current hash is d2efc76053eb94aeb2f5fd3226a1b3e82b7c37ae14867fed2fff27dd2ab18064, 			previous block is <__main__.Block object at 0x110195390>, next block is None 
+
+"""
+
+# test case 3:
+
+"""
+type the data of block
+""
+Continue Add? 
+ yes/no 
+n
+Loop through Blocks: 
+
+At current block, timestamp is 2019-07-30 05:47:59.124471+00:00, data is "", previous_hash is 0, current hash is c431824cee78b718cf860459a8c84da69c50f01023fb4f2879e013596cd0793f, 			previous block is None, next block is None 
+"""
 
 """
 explanation: 

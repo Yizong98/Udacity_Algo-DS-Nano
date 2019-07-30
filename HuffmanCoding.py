@@ -95,3 +95,52 @@ if __name__ == "__main__":
 
     print ("The size of the decoded data is: {}\n".format(sys.getsizeof(decoded_data)))
     print ("The content of the encoded data is: {}\n".format(decoded_data))
+
+
+    # test case 1: haha
+    # result:
+    """
+    The size of the data is: 53
+
+    The content of the data is: haha
+
+    The size of the encoded data is: 28
+
+    The content of the encoded data is: 0101
+
+    The size of the decoded data is: 53
+
+    The content of the encoded data is: haha
+    """
+
+    # test case 2: h
+    # result:
+    """
+    The size of the data is: 50
+
+    The content of the data is: h
+
+    The size of the encoded data is: 24
+
+    The content of the encoded data is: 0
+
+    The size of the decoded data is: 50
+
+    The content of the encoded data is: h
+
+    # test case 3: ""(empty)
+    The size of the data is: 51
+
+    The content of the data is: ""
+
+    The size of the encoded data is: 24
+
+    The content of the encoded data is: 0
+
+    The size of the decoded data is: 51
+
+    The content of the encoded data is: ""
+    """
+
+
+
