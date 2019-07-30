@@ -3,7 +3,15 @@
 explanation: 
 
 Effciency:
-All operations are of O(1) since the cache is implemented by OrderedDict
+
+Space Complexity:
+
+O(n) where n is the capacity of the cache. This is because when the cache is full, least recent used element 
+will be deleted.
+
+Time Complexity:
+
+All operations are of O(1) since the cache is implemented by OrderedDict.
 
 Design Choice:
 I use OrderedDict to make the code look more compact and elegant. The put method might be a 
@@ -19,13 +27,14 @@ Effciency:
 
 Space Complexity:
 
-1. O(n) where n refers to total number of possible paths in the directory, also
-the size of call stack in recursion.
+1. O(m) where m refers to the maximum depth of a file in the orginal directory. This is because when using
+recursion, we determine the space by the longest stream of active stack frames.
 
 
 Time Complexity:
 
-1. O(n) where n refers to total number of possible paths in the directory.
+1. O(n) where n refers to total number of possible paths in the directory. This is because we need to check all
+possible paths, which means we need to go through every possible directory, sub-directory, file, etc.
 
 Design Choice:
 
@@ -65,13 +74,16 @@ Effciency:
 
 Space Complexity:
 
-O(n) where n is all the possible users in the current group, including users in the sub-group.
+O(m) where n is the maximum depth in the recursive tree.
 
 This is because recursion takes call stack space.
 
 Time Complexity:
 
-O(n) where n is all the possible users in the current group, including users in the sub-group.
+O(n+m) where n is all the possible users in the current group, including users in the sub-group, 
+and m is the number of subgroups in worst case scenario.
+This is because we have to check all possibilities to make sure the user is in or not. This constructs
+a recursive tree that requires O(n+m)
 
 Design Choice: Recursion that check each user and its sub-group if not found.
 
@@ -80,7 +92,17 @@ Design Choice: Recursion that check each user and its sub-group if not found.
 
 explanation: 
 
-Effciency: Adding Block operation is O(1), assuming the hash calculation operates at O(1).
+Effciency: 
+
+Space Complexity：
+
+O(n) this is straight forward since there are n objects in the Blockchain.
+
+Time Complexity:
+
+Adding Block operation is O(1), assuming the hash calculation operates at O(1). This is because
+all operations in block creation takes constant time.
+
 
 Design Choice: Design Block with prev and next, making it easy to reference as a doubly linkedList. 
 The Blockchain class integrates the blocks together.
@@ -92,9 +114,16 @@ explanation:
 Effciency: Sacrificing a little space leads to linear solutions. 
 
 Space Complexity O(n+m), 
-where n is number of elements in first linkedlist and m is the number of elements in the second
-linkedlist.
 
-Time Complexity O(n+m)
+where n is number of unique elements in first linkedlist and m is the number of unique elements in the second
+linkedlist. This is because union aggregating the total unique values of two linkedlists.
+
+Time Complexity O(n+m) for both union and intersection,
+
+where n is number of unique elements in first linkedlist and m is the number of unique elements in the second
+linkedlist. 
+
+This is because we have to check each element in each linkedlist to see whether it is in the other one or not.
+
 
 Design Choice: use set data structure for its O(1) and ease of intersection and union.

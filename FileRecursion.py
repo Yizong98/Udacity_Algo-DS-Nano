@@ -24,13 +24,15 @@ def find_files(suffix, path):
       elif os.path.isdir(path):
         for elem in os.listdir(path):
           DFS(suffix,os.path.join(path,elem))
+      else:
+        print("Please enter valid path!")
     DFS(suffix,path)
     return ans
 if __name__ == "__main__":
   print("The Paths that end with .c are \n")
   print(find_files(".c",input("Type your path \n")))
   # test case: ./testdirs
-  # result: []
+  # result: "Please enter valid path!" []
   # test case ./testdir
   # result: [./testdir/subdir1/a.c, ./testdir/subdir3/subsubdir1/b.c, ./testdir/subdir5/a.c, ./testdir/t1.c]
 

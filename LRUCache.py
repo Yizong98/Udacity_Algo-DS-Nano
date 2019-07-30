@@ -4,9 +4,12 @@ class LRUCache(object):
         """
         :type capacity: int
         """
-        self.limit = capacity
-        self.cache = OrderedDict()
-        self.size = 0
+        if capacity <= 0:
+            print("Can't perform operations on 0 capacity cache, please enter positive number")
+        else:
+            self.limit = capacity
+            self.cache = OrderedDict()
+            self.size = 0
 
     def get(self, key):
         """
@@ -49,7 +52,7 @@ little different from the requirement but I believe it is more reasonable to per
 
 if __name__ == "__main__":
 
-
+    # TEST case 1
     cache = LRUCache(2);
 
     cache.put(1, 1)
@@ -68,3 +71,20 @@ if __name__ == "__main__":
     # returns 3
     cache.get(4)       
     # returns 4
+
+    # Test case 2
+    our_cache = LRUCache(2)
+    our_cache.put(1, 1)
+    our_cache.put(2, 2)
+    our_cache.put(1, 10)
+    print(our_cache.get(1))
+    # should return 10
+    print(our_cache.get(2))
+    # should return 2
+
+    # Test case 3
+    our_cache = LRUCache(0)
+    # should print some warning message like "Can't perform operations on 0 capacity cache, please enter positive number"
+
+
+

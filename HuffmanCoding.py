@@ -142,5 +142,22 @@ if __name__ == "__main__":
     The content of the encoded data is: ""
     """
 
+    # test case 3: AAAAAAA
+    # result:
+    """
+    The size of the data is: 56
+
+    The content of the data is: AAAAAAA
+
+    The size of the encoded data is: 24
+
+    The content of the encoded data is: 0
+
+    The size of the decoded data is: 56
+
+    The content of the encoded data is: AAAAAAA
+    """
+
+
 
 
