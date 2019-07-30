@@ -59,6 +59,12 @@ explanation:
 
 Effciency:
 
+Space Complexity:
+
+obvious O(n) since we need to store each character in the string in a tree.
+
+Time Complexity:
+
 1. The encoding process takes O(nlogn), heapify takes O(n), during each iteration in the loop it takes O(logn) for heappush, 
 and it takes n iterations. The DFS takes approximately O(n) where n is the number of characters in the string, which are the leaves
 in the tree. The while loop dominate the asymptotic terms, giving O(nlogn).

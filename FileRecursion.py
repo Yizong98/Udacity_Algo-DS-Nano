@@ -35,6 +35,14 @@ explanation:
 
 Effciency:
 
+Space Complexity:
+
+1. O(n) where n refers to total number of possible paths in the directory, also
+the size of call stack in recursion.
+
+
+Time Complexity:
+
 1. O(n) where n refers to total number of possible paths in the directory.
 
 Design Choice:
